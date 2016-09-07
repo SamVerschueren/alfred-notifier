@@ -2,6 +2,8 @@
 
 > Update notifications for your [Alfred](https://www.alfredapp.com/) workflow
 
+<img src="screenshot.png">
+
 
 ## Install
 
