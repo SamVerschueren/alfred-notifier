@@ -1,6 +1,6 @@
 {
   "name": "alfred-notifier",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Update notifications for your Alfred workflow",
   "license": "MIT",
   "repository": "SamVerschueren/alfred-notifier",
