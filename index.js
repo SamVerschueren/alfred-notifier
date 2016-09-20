@@ -1,6 +1,7 @@
 'use strict';
+const path = require('path');
 const execa = require('execa');
 
 module.exports = () => {
-	execa('./check.js', [process.cwd()], {cwd: __dirname});
+	execa(path.join(__dirname, 'check.js'));
 };

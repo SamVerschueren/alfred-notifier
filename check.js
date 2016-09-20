@@ -9,7 +9,7 @@ const notify = require('./lib/notify');
 
 const ONE_DAY = 86400000;
 
-const workflowPath = process.argv[2];
+const workflowPath = process.cwd();
 const conf = new CacheConf();
 
 const checkNpm = pkg => latestVersion(pkg.name).then(version => ({
