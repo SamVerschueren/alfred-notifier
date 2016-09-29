@@ -6,11 +6,12 @@ const semver = require('semver');
 const execa = require('execa');
 const CacheConf = require('cache-conf');
 const notify = require('./lib/notify');
+const pkg = require('./package.json');
 
 const ONE_DAY = 86400000;
 
 const workflowPath = process.cwd();
-const conf = new CacheConf();
+const conf = new CacheConf({projectName: pkg.name});
 
 const checkNpm = pkg => latestVersion(pkg.name).then(version => ({
 	latest: version,
