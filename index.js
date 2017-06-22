@@ -3,5 +3,6 @@ const path = require('path');
 const execa = require('execa');
 
 module.exports = () => {
-	execa(path.join(__dirname, 'check.js'));
+	const cp = execa(path.join(__dirname, 'check.js'));
+	cp.unref();
 };
