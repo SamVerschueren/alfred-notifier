@@ -49,8 +49,5 @@
   },
   "devDependencies": {
     "xo": "*"
-  },
-  "xo": {
-    "esnext": true
   }
 }
