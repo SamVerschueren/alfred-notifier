@@ -1,8 +1,11 @@
 'use strict';
 const path = require('path');
-const execa = require('execa');
+const cp = require('child_process');
 
 module.exports = () => {
-	const cp = execa(path.join(__dirname, 'check.js'));
-	cp.unref();
+	const subProcess = cp.spawn(path.join(__dirname, 'check.js'), [], {
+		detached: true,
+		stdio: 'ignore'
+	});
+	subProcess.unref();
 };
