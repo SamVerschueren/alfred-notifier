@@ -33,7 +33,7 @@ readPkg(workflowPath)
 			if (!semver.eq(res.latest, res.current)) {
 				// Overwrite `info.plist` and reload the workflows
 				return notify(workflowPath, `Update available: ${res.current} → ${res.latest}. Run \`npm install -g ${res.name}\``)
-					.then(() => execa('open', ['-n', '-a', 'Alfred 3']));
+					.then(() => execa('open', ['-a', 'Alfred 3']));
 			}
 		});
 	});
